@@ -19,11 +19,11 @@ namespace Homework1_5_2
                 purchase.Enqueue(sumPurchase[i]);
             }
 
-            while (purchase.Count>0)
+            foreach (var sale in purchase)
             {
                 Console.Clear();
-                sumMoney += purchase.Peek();
-                Console.WriteLine("Клиент обслужен. Вы получили " + purchase.Dequeue() + " рублей. Общая сумма - " + sumMoney);
+                sumMoney += sale;
+                Console.WriteLine("Клиент обслужен. Вы получили " + sale + " рублей. Общая сумма - " + sumMoney);
                 Console.ReadKey();
             }
 
